@@ -1,18 +1,16 @@
 <?php
 
 /** @var \Laravel\Lumen\Routing\Router $router */
-
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register all of the routes for an application.
-| It is a breeze. Simply tell Lumen the URIs it should respond to
-| and give it the Closure to call when that URI is requested.
-|
-*/
+use App\Http\Controllers\Controller;
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    $response = [
+        'name' => "Mexico Zip Codes API",
+        'description' => "API created for code test application to BackBone Systems",
+        'version' => $router->app->version()
+    ];
+
+    return json_encode($response);
 });
+
+$router->get('{zip_code}', 'Controller@index');

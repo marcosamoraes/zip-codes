@@ -1,24 +1,9 @@
-# Lumen PHP Framework
+# Mexico Zip Codes Search - Laravel (Lumen)
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://img.shields.io/packagist/dt/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://img.shields.io/packagist/v/laravel/lumen-framework)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://img.shields.io/packagist/l/laravel/lumen)](https://packagist.org/packages/laravel/lumen-framework)
+## Introducion
+I started looking for Mexico Zip Codes API in Google and try to use Google GeoCode API, but all API's I tested (including Google GeoCode API) not return me the all data your API return or isn't free. After that I think to create an API that use your API, but I thought it isn't what you want. So I think in populate a database with all Mexico zip codes data and provide an own API for it. 
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
+## How did I make it
+I created a webscrapper using JQuery and run in console of the website https://codigo-postal.co/en-us/mexico/ getting all zip codes data, saving as json files and use it to populate my database.
 
-## Official Documentation
-
-Documentation for the framework can be found on the [Lumen website](https://lumen.laravel.com/docs).
-
-## Contributing
-
-Thank you for considering contributing to Lumen! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Lumen framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The json files are in a folder called json_files inside public and in root I saved a SQL file and the webscrapper script that I created.
