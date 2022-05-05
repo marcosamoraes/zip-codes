@@ -38,14 +38,14 @@ class Controller extends BaseController
                 "name" => strtoupper(Str::ascii($settlement->name)),
                 "zone_type" => strtoupper(Str::ascii($settlement->zone)),
                 "settlement_type" => [
-                    "name" => ucwords(Str::ascii($settlement->type))
+                    "name" => Str::ascii($settlement->type)
                 ]
             ];
         }
 
         $response = [
             "zip_code" => $zip_code->zip_code,
-            "locality" => strtoupper(Str::ascii($zip_code->city->state->name)),
+            "locality" => strtoupper(Str::ascii($zip_code->city->name)),
             "federal_entity" => [
                 "key" => $zip_code->city->state->id,
                 "name" => strtoupper(Str::ascii($zip_code->city->state->name)),
